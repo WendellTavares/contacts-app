@@ -1,0 +1,46 @@
+<h2>Lista de Contatos</h2>
+
+<hr>
+
+<!--
+<div class="form-group row mx-auto">
+    <label class="col-sm-1 col-form-label text-center">Pesquisar:</label>
+    <div class="col-sm-4">
+        <input [(ngModel)]="filter" type="search" class="form-control">
+    </div>
+</div>
+-->
+
+<div class="form-group row my-4">
+    <label class="col-sm-1 text-center">Pesquisar:</label>
+    <div class="col-sm-11">
+        <input [(ngModel)]="filter" type="search" class="form-control">
+    </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr class="text-center">
+            <th>Imagem</th>
+            <th>Nome</th>
+            <th>Ramal Interno</th>
+            <th>Ramal Externo</th>
+            <th>Email</th>
+            <th>Corporativo</th>
+            <th>Setor</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let contact of filteredContacts" class="text-center align-middle">        
+            <!--<td><img [src]="contact.imagemUrl" width="80" height="86"></td>-->
+            <td><img src={{contact.imagemUrl}} onerror="this.src='assets/images/avatar.svg'" width="80" height="86"></td>
+            <td>{{ contact.nome }}</td>
+            <td>{{ contact.ramalInterno }}</td>
+            <td>{{ contact.ramalExterno | phoneFormat }}</td>
+            <td>{{ contact.email }}</td>
+            <td>{{ contact.corporativo | phoneFormat }}</td>
+            <td>{{ contact.setor }}</td>
+        </tr>
+    </tbody>
+</table>
