@@ -1,0 +1,19 @@
+.show769 {
+    display: none;
+}
+
+.show1400 {
+    display: none;
+}
+
+@media (min-width: 769px) {
+    .show769 {
+        display: table-cell;
+    }
+}
+
+@media (min-width: 1400px) {
+    .show1400 {
+        display: table-cell;
+    }
+}
