@@ -1,15 +1,15 @@
-<h2>Lista de Contatos</h2>
-
-<hr>
-
-<div class="form-group row my-4">
-    <label class="col-sm-1 text-center">Pesquisar:</label>
-    <div class="col-sm-11">
-        <input [(ngModel)]="filter" type="search" class="form-control">
+<div class="container header-form fixed-top bg-light" style="margin-top:72px">
+    <h2>Lista de Contatos</h2>
+    <hr>
+    <div class="form-group row my-4">
+        <label class="col-sm-2 text-center">Pesquisar:</label>
+        <div class="col-sm-9">
+            <input [(ngModel)]="filter" type="search" class="form-control">
+        </div>
     </div>
 </div>
 
-<div class="table-responsive">
+<div class="table-responsive" style="margin-top: 220px;">
     <table class="table table-striped">
         <thead>
             <tr class="text-center">
